@@ -1,0 +1,14 @@
+# Linux x86_64, Python 3.11. Use a separate venv; converter is not supported on Windows.
+# Top-level conversion toolchain pins. Save pip freeze with each successful export.
+litert-torch==0.8.0
+ai-edge-litert==2.1.0
+torch==2.8.0
+torchvision==0.23.0
+ultralytics==8.3.160
+einops==0.8.1
+numpy==2.2.6
+Pillow==11.3.0
+torchao==0.13.0
+transformers==4.56.2
+jax==0.6.2
+jaxlib==0.6.2

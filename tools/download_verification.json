@@ -1,0 +1,22 @@
+{
+  "downloaded_at_utc": "2026-10-30T08:27:59.562375+00:00",
+  "repository": "https://github.com/TaoWangzj/GridFormer",
+  "source_commit": "d0ec11c2bf3bb0f09e00059006523c4c44c535a0",
+  "checkpoint_drive_id": "1aNyEQPHFviCYr_H_rrz8m3mqlRUGqEuR",
+  "checkpoint": {
+    "bytes": 243056049,
+    "sha256": "5cdfaff392732e42856c42029889386cfe607af1c95f85d7f73ea00dee301fcc",
+    "zip_crc_passed": true,
+    "entries": 2990
+  },
+  "architecture_sha256": "2e1a8c72cb18114291d4fddc70535ddc34dccd7d64c17edc73de70e575afb79d",
+  "config_sha256": "c53d68a6be663f2272fc59c46afe76d36053ff4564396f8e70f91be4f6c99643",
+  "strict_pytorch_load_verified": false,
+  "tflite_conversion_verified": false,
+  "verification_notes": [
+    "Official Google Drive folder enumerated using gdown 5.2.0.",
+    "Full checkpoint download completed; all ZIP CRC checks passed.",
+    "State dictionaries params and params_ema observed via pickletools; no pickle loaded.",
+    "PyTorch load, TFLite conversion, Android inference, GPU placement and image quality remain unverified."
+  ]
+}

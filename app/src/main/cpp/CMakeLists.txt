@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22)
+project(gridrestore_probe LANGUAGES CXX)
+add_library(gridrestore_probe SHARED delegate_probe.cpp)
+target_include_directories(gridrestore_probe PRIVATE vendor)
+target_compile_features(gridrestore_probe PRIVATE cxx_std_17)
+target_link_options(gridrestore_probe PRIVATE "-Wl,-z,max-page-size=16384")

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "required_contract_not_export_evidence",
+  "preprocessing": {"color": "RGB", "dtype": "float32", "range": [0, 1]},
+  "gridformer.tflite": {
+    "input": [1, 256, 256, 3],
+    "outputs": [[1, 256, 256, 3]],
+    "layout": "NHWC",
+    "postprocessing": "clip_to_0_1",
+    "source_commit": "d0ec11c2bf3bb0f09e00059006523c4c44c535a0",
+    "checkpoint_drive_id": "1aNyEQPHFviCYr_H_rrz8m3mqlRUGqEuR"
+  },
+  "yolo_detect.tflite": {
+    "input": [1, 640, 640, 3],
+    "outputs": [[1, 84, 8400]],
+    "input_layout": "NHWC",
+    "prediction_layout": "batch_channels_anchors",
+    "classes": 80,
+    "coordinates": "normalized_xywh_on_letterboxed_640_canvas",
+    "scores": "class_probabilities_no_objectness",
+    "nms": "external_class_aware"
+  },
+  "yolo_segment.tflite": {
+    "output_order": "not fixed; identify rank-3 predictions and rank-4 prototypes by shape",
+    "input": [1, 640, 640, 3],
+    "outputs": [[1, 116, 8400], [1, 160, 160, 32]],
+    "input_layout": "NHWC",
+    "prototype_layout": "NHWC",
+    "classes": 80,
+    "mask_coefficients": 32,
+    "coordinates": "normalized_xywh_on_letterboxed_640_canvas",
+    "scores": "class_probabilities_no_objectness",
+    "masks": "sigmoid(coefficients_times_prototypes), crop_bbox, undo_letterbox",
+    "nms": "external_class_aware"
+  }
+}
